@@ -129,7 +129,7 @@ for im_num, input_dir in enumerate(image_directories):
                      output_measurements.get_measurement('Cells', 'Children_WhiteCells_Count')
 
     for category, code in category_code_dict.items():
-        cell_counts.loc[im_num, category] = np.nonzero(category_codes == code)
+        cell_counts.loc[im_num, category] = np.sum(category_codes == code)
 
 # SAVE OUTPUT TO FILE
 
